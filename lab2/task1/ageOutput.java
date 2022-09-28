@@ -2,7 +2,7 @@ package lab2.task1;
 
 import java.util.Scanner;
 
-public class ageOutput {
+public class AgeOutput {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите свой возраст: ");

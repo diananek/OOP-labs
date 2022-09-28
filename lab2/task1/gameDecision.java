@@ -1,7 +1,7 @@
 package lab2.task1;
 import java.util.Scanner;
 
-public class gameDecision {
+public class GameDecision {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 

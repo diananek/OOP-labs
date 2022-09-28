@@ -2,7 +2,7 @@ package lab2.task1;
 
 import java.util.Scanner;
 
-public class printDays {
+public class PrintDays {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите номер месяца и год: ");
