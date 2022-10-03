@@ -4,32 +4,29 @@ import java.util.Scanner;
 
 public class HeroneSqrt {
 
-    public static double sqrt(double a, double x0) {
-        return (1 / 2.0 * (x0 + a / x0));
-        
+    public static double sqrt(int userNumber) {
+        double result = userNumber;
+        int i = 0;
+        while ((result * result > userNumber) && (i < 100)) {
+            result = ((result + userNumber / result) / 2);
+            i++;
+        }
+        return result;
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Введите значение a: ");
-        double valueA = in.nextDouble();
+        System.out.println("Введите число: ");
+        int number = in.nextInt();
+        double result = 0;
 
-        double error = 0.000001;
-        double prevValue = valueA;
-        double currValue = sqrt(valueA, prevValue); 
-        double diff = Math.abs(currValue - prevValue);
-
-        if (valueA > 0) {
-            while (diff >= 2 * error && diff * diff >= 2 * error) {
-                prevValue = currValue;
-                currValue = sqrt(valueA, prevValue);
-                diff = Math.abs(currValue - prevValue);
-            }
+        if (number > 0) {
+            result = sqrt(number);
         } else {
             System.out.println("Введите значение больше 0!");
 
         }
         
-        System.out.println("Значение квадратного корня = " + currValue);
+        System.out.println(result);
     }
 }
