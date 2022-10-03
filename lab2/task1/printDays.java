@@ -28,7 +28,7 @@ public class PrintDays {
                 daysNumber = 28 + (monthNumber + monthNumber / 8) % 2 
                 + 2 % monthNumber + 1 / monthNumber * 2;
             }
-            System.out.printf("Количество дней: %d", daysNumber);
+            System.out.println(daysNumber);
         } else {
             System.out.println("Месяц и год должны быть больше нуля!");
         }

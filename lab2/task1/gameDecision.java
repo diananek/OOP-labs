@@ -21,7 +21,7 @@ public class GameDecision {
                         System.out.println("Влажность? 0 - низкая, 1 - высокая");
                         boolean isWet = in.nextInt() == 1 ? true : false;
                         if (!isWet) {
-                            System.out.println("Вы хотите играть в бадминтон!");
+                            System.out.println("Да");
                             return;
 
                         } 
@@ -29,7 +29,7 @@ public class GameDecision {
                 }
             }
         }
-        System.out.println("Вы не хотите играть в бадминтон");
+        System.out.println("Нет");
 
     }
 }

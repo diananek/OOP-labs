@@ -25,6 +25,6 @@ public class Median {
         } else {
             median = (nums[(arrLenght - 1) / 2] + nums[arrLenght / 2]) / 2.0;
         }   
-        System.out.println("Медиана: " + median);        
+        System.out.println(median);        
     }
 }

@@ -24,7 +24,7 @@ public class MaxNumCount {
             }
         }
 
-        System.out.println("Количество чисел, равных максимальному: " + count);
+        System.out.println(count);
 
     }
 }
