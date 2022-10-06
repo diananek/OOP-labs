@@ -20,14 +20,14 @@ public class DataLogger {
             Arrays.sort(dataArray, Comparator.comparingDouble(x -> x[0]));
             for (int i = 0; i < dataArray.length; i++) {
                 if (dataArray[i][0] != 0) {
-                    System.out.println(Math.round(dataArray[i][0]) + " " + dataArray[i][1]);
+                    System.out.printf("%.0f %.1f%n", dataArray[i][0], dataArray[i][1]);
                 } 
             }
         } else {
             Arrays.sort(dataArray, Comparator.comparingDouble(x -> x[1]));
             for (int i = 0; i < dataArray.length; i++) {
                 if (dataArray[i][0] != 0) {
-                    System.out.println(Math.round(dataArray[i][0]) + " " + dataArray[i][1]);
+                    System.out.printf("%.0f %.1f%n", dataArray[i][0], dataArray[i][1]);
                 }
             }
             
