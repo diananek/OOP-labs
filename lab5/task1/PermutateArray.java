@@ -2,12 +2,17 @@ package lab5.task1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class PermutateArray {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
         PermutateArray permArray = new PermutateArray();
-        int[] arr = {1, 2, 3};
-        List<List<Integer>> permute = permArray.perms(arr);
+
+        int[] inputArray = stringToIntArray(input.nextLine());
+
+        List<List<Integer>> permute = permArray.perms(inputArray);
         
         printArray(permute);
     }
@@ -42,5 +47,16 @@ public class PermutateArray {
             }
         }
         System.out.print("]");
+    }
+    public static int[] stringToIntArray(String line) {
+        String[] stringArray = line.split(" ");
+
+        int[] intArray = new int[stringArray.length];
+
+        for (int i = 0; i < stringArray.length; i++) {
+            intArray[i] = Integer.valueOf(stringArray[i]);
+        }
+
+        return intArray;
     }
 }
