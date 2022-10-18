@@ -9,18 +9,8 @@ public class WaterVolume {
         Scanner input = new Scanner(System.in);
 
         List<Integer> inputArray = stringToIntArray(input.nextLine());
-        int maxVolume = 0;
 
-        for (int i = 0; i < inputArray.size(); i++) {
-            for (int j = 1; j < inputArray.size(); j++) {
-                int volume = (j-i) * Math.min(inputArray.get(i), inputArray.get(j));
-                if (volume > maxVolume) {
-                    maxVolume = volume;
-                }
-            }
-        }
-
-        System.out.println(maxVolume);
+        System.out.println(calcVolume(inputArray));
     }
     public static List<Integer> stringToIntArray(String line) {
         String[] stringArray = line.split(",");
@@ -32,5 +22,19 @@ public class WaterVolume {
         }
 
         return intArray;
+    }
+    public static int calcVolume(List<Integer> inputArray) {
+        int maxVolume = 0;
+
+        for (int i = 0; i < inputArray.size(); i++) {
+            for (int j = 1; j < inputArray.size(); j++) {
+                int volume = (j-i) * Math.min(inputArray.get(i), inputArray.get(j));
+                if (volume > maxVolume) {
+                    maxVolume = volume;
+                }
+            }
+        }
+
+        return maxVolume;
     }
 }
