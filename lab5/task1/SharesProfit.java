@@ -31,7 +31,7 @@ public class SharesProfit {
     }
 
     public static List<Integer> stringToIntArray(String line) {
-        String[] stringArray = line.split(" ");
+        String[] stringArray = line.split(",");
 
         List<Integer> intArray = new ArrayList<Integer>();
 

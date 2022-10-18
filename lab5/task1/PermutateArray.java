@@ -49,7 +49,7 @@ public class PermutateArray {
         System.out.print("]");
     }
     public static int[] stringToIntArray(String line) {
-        String[] stringArray = line.split(" ");
+        String[] stringArray = line.split(",");
 
         int[] intArray = new int[stringArray.length];
 
