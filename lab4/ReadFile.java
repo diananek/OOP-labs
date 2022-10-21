@@ -26,7 +26,7 @@ public class ReadFile {
   }
  
   public static void main(String[] args) {
-    readFile("D:/Образование/University/ООП/OOP-labs/lab4/data.txt");
+    readFile("lab4/data.txt");
   }
 
 }
