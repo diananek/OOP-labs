@@ -49,10 +49,15 @@ public class DataLogger {
             double id = Double.parseDouble(data[i].substring(0, 2));
             double temp = Double.parseDouble(data[i].substring(2));
 
-            if (temp > 50 || temp < -50) {
-                throw new ValueOutRangeException();
+            try {
+                if (temp > 50 || temp < -50) {
+                    throw new ValueOutRangeException();
+                }
+            } catch (ValueOutRangeException e) {
+                System.out.println(e);
+                System.exit(0);
             }
-
+            
             double[] tuple = {id, temp};
             dataArray[i] = tuple;
         }
