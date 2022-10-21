@@ -50,7 +50,7 @@ public class DataLogger {
             double temp = Double.parseDouble(data[i].substring(2));
 
             if (temp > 50 || temp < -50) {
-                throw new Exception("Temperature should be between -50 and 50");
+                throw new ValueOutRangeException();
             }
 
             double[] tuple = {id, temp};
