@@ -26,14 +26,14 @@ public class OrdersAmount {
         milk.setPrice(55.0);
 
         Product bread  = new Product();
-        milk.setId(2L);
-        milk.setName("Bread");
-        milk.setPrice(31.4);
+        bread.setId(2L);
+        bread.setName("Bread");
+        bread.setPrice(31.4);
 
         Product apple  = new Product();
-        milk.setId(3L);
-        milk.setName("Apple");
-        milk.setPrice(102.25);
+        apple.setId(3L);
+        apple.setName("Apple");
+        apple.setPrice(102.25);
 
         Customer firstCustomer = new Customer();
         firstCustomer.setId(1L);
