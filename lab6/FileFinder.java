@@ -33,7 +33,12 @@ public class FileFinder {
                         System.out.println("Введите имя файла:");
                         String fileName = input.nextLine().trim();
                         File resultFile = searchFile(directoryPath, fileName);
-                        System.out.println(resultFile.getPath());
+                        if (resultFile != null) {
+                            System.out.println(resultFile.getPath());
+                        } else {
+                            System.out.println("Такого файла не существует");
+                        }
+                        break;
                     case 2:
                         System.out.println("Введите содержимое файла:");
                         String fileContent = input.nextLine();
@@ -41,8 +46,11 @@ public class FileFinder {
                         for (String path : pathList) {
                             if (isContainContent(path, fileContent)) {
                                 System.out.println(path);
+                            } else {
+                                System.out.println("Такого файла не существует"); 
                             }
                         }
+                        break;
                     default:
                         System.out.println("Введите корректное значение!");
     
@@ -74,7 +82,7 @@ public class FileFinder {
         InputStream stream = new FileInputStream(pathFile);
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(stream))) {
             Stream<String> linesStream = bufferedReader.lines();
-            return linesStream.allMatch(line -> line.contains(searchString));
+            return linesStream.anyMatch(line -> line.contains(searchString));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
